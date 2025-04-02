@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Web Blog Project - About Me</title>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Vertical Nav Bar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/read-blog">Read Blog</a></li>
+                <li><a href="/edit-blog">Edit Blog</a></li>
+                <li><a href="/delete-blog">Delete Blog</a></li>
+                <li><a href="/new-blog">New Blog</a></li>
+                <li><a href="/about-me">About Me</a></li>
+                <li><a href="/contact-me">Contact Me</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <p>Raphael Severino © <span id="current-year"></span></p>
+            </footer>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="blog-container">
+                <h1>About Me</h1>
+                <h2>Raphael Severino</h2>
+                <p>Hi, I’m Raphael! I’m a web development enthusiast working through a bootcamp to build cool projects like this blog. I love coding, learning new tech, and creating things that people can use. When I’m not at my keyboard, you might find me working out at the gym, listening to audibooks, or just chilling with good friends or family. Thanks for checking out my blog!</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

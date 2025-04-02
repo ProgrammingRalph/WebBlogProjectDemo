@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Web Blog Project - Contact Me</title>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Vertical Nav Bar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/read-blog">Read Blog</a></li>
+                <li><a href="/edit-blog">Edit Blog</a></li>
+                <li><a href="/delete-blog">Delete Blog</a></li>
+                <li><a href="/new-blog">New Blog</a></li>
+                <li><a href="/about-me">About Me</a></li>
+                <li><a href="/contact-me">Contact Me</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <p>Raphael Severino © <span id="current-year"></span></p>
+            </footer>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="blog-container">
+                <h1>Contact Me</h1>
+                <h2>Get in Touch</h2>
+                <p>Want to say hi, suggest a blog topic, or just chat about coding? Here’s how you can reach me:</p>
+                <ul>
+                    <li>Email: <a href="mailto:raphael@example.com">raphael@example.com</a></li>
+                    <li>Twitter: <a href="https://twitter.com/raphaeldev" target="_blank">@raphaeldev</a></li>
+                    <li>GitHub: <a href="https://github.com/raphaeldev" target="_blank">github.com/raphaeldev</a></li>
+                </ul>
+                <p>(Note: These are placeholders. For now, this is just a demo.)</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

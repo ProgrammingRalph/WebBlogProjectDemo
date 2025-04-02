@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Web Blog Project</title>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Vertical Nav Bar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/read-blog">Read Blog</a></li>
+                <li><a href="/edit-blog">Edit Blog</a></li>
+                <li><a href="/delete-blog">Delete Blog</a></li>
+                <li><a href="/new-blog">New Blog</a></li>
+                <li><a href="/about-me">About Me</a></li>
+                <li><a href="/contact-me">Contact Me</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <p>Raphael Severino © <span id="current-year"></span></p>
+            </footer>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <% if (locals.content) { %>
+                <div class="blog-container">
+                    <h1><%= content.title %></h1>
+                    <h2><%= content.author %></h2>
+                    <p><%= content.blog %></p>
+                </div>
+                
+            <% } else { %>
+                <div class="blog-container">
+                    <h1>Welcome to the Blog</h1>
+                    <h2>Embracing the Journey: Finding Strength in Every Step</h2>
+                    <p><strong>Embracing the Journey: Finding Strength in Every Step</strong><br>
+
+                        Life is a journey, filled with twists, turns, and unexpected challenges. At times, it may seem overwhelming, but within every obstacle lies an opportunity for growth. When we shift our perspective, we begin to see setbacks not as roadblocks but as stepping stones toward a stronger, wiser version of ourselves. <br>
+                        
+                        <strong>The Power of Perspective</strong><br>
+                        
+                        Every challenge presents two choices: to see it as a burden or as a lesson. When we choose the latter, we unlock the power within ourselves to adapt, persevere, and thrive. Failure is not the opposite of success; it is a part of it. Every great achievement has been built upon moments of struggle, self-doubt, and perseverance. The key is to keep moving forward, even when the path is unclear. <br>
+                        
+                        <strong>Small Steps, Big Impact</strong><br>
+                        
+                        Transformation doesn’t happen overnight. It is the result of small, consistent efforts. Whether it’s improving your health, learning a new skill, or strengthening relationships, every little step matters. Celebrate progress, no matter how small. Each step forward is proof of your resilience and determination. <br>
+                        
+                        <strong>Believing in Yourself</strong><br>
+                        
+                        The most important voice you will ever hear is your own. Speak words of encouragement to yourself. Believe that you are capable, strong, and deserving of success. Surround yourself with positivity—people who uplift you, experiences that enrich you, and thoughts that empower you. <br>
+                        
+                        <strong>Embracing Change</strong><br>
+                        
+                        Change is inevitable, but how we respond to it is within our control. Instead of fearing change, welcome it as a chance to evolve. Growth happens when we step outside our comfort zones and embrace the unknown with courage and curiosity. <br>
+                        
+                        <strong>The Journey Continues</strong><br>
+                        
+                        No matter where you are in life, remember that your story is still being written. Each day is a new opportunity to learn, to grow, and to inspire others. Trust the process, embrace the journey, and find strength in every step.
+                        
+                        You are capable. You are resilient. And you are meant to shine.
+                        
+                        </p>
+                </div>
+            <% } %>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

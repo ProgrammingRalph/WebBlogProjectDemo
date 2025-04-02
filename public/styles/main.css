@@ -1,0 +1,149 @@
+@keyframes fadeBackground {
+    0% { background-color: rgba(70, 130, 180, 0.4); } /* Muted Blue Gray */
+    50% { background-color: rgba(139, 69, 19, 0.4); } /* Warm Brown Tint */
+    100% { background-color: rgba(70, 130, 180, 0.4); } /* Back to Blue Gray */
+}
+body {
+    background-color: rgba(70, 130, 180, 0.4);
+    /* padding: 20px; */
+    border-radius: 10px;
+    /* width: 80%; */
+    margin: auto;
+    /* text-align: center; */
+    animation: fadeBackground 6s infinite alternate ease-in-out;
+    margin: 0; /* Remove default margin */
+}
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+}
+.page-container {
+    display: flex; /* Use flexbox for layout */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.sidebar {
+    width: 200px; /* Fixed width for the nav bar */
+    background-color: #333; /* Dark background */
+    color: white;
+    padding: 20px 0;
+    display: flex; /* Flexbox to push footer to bottom */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Pushes footer down */
+}
+
+.sidebar li {
+    margin: 10px 0; /* Space between items */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    display: block; /* Full clickable area */
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: #555; /* Hover effect */
+}
+
+.sidebar-footer {
+    text-align: center; /* Center the footer text */
+    padding: 0; /* Vertical padding */
+    font-size: 14px;
+    color: #ccc; /* Lighter text color */
+}
+
+.main-content {
+    flex: 1; /* Takes remaining space */
+    padding: 20px; /* Space inside main content */
+}
+
+.form-container {
+    width: 800px; /* Fixed width for the entire form */
+    margin: 20px auto; /* Centers the form horizontally */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: rgb(241, 229, 162);
+}
+
+.blog-container {
+    width: 800px; /* Matches form-container */
+    margin: 20px auto; /* Centers like the form */
+    padding: 20px; /* Consistent padding */
+    border-radius: 5px; /* Matches form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Matches form */
+    background-color: rgb(241, 229, 162);
+    
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 50%; /* Makes name and title narrower (400px) */
+    margin-left: auto; /* Centers the narrower fields */
+    margin-right: auto;
+}
+
+.blog-group {
+    text-align: center; /* Centers the label and contents */
+    width: 100%; /* Makes blog content use full 800px */
+}
+
+.submit-group {
+    width: 100%; /* Matches blog width for centering */
+    text-align: center; /* Centers the submit button */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%; /* Fills its parent .form-group (50% = 400px) */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%; /* Fills its parent .blog-group (100% = 800px) */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 200px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

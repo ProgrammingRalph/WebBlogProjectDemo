@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Web Blog Project</title>
+    
+</head>
+<body>
+    <div class="page-container">
+        <!-- Vertical Nav Bar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/read-blog">Read Blog</a></li>
+                <li><a href="/edit-blog">Edit Blog</a></li>
+                <li><a href="/delete-blog">Delete Blog</a></li>
+                <li><a href="/new-blog">New Blog</a></li>
+                <li><a href="/about-me">About Me</a></li>
+                <li><a href="/contact-me">Contact Me</a></li>
+            </ul>
+            <footer class="sidebar-footer">
+                <p>Raphael Severino © <span id="current-year"></span></p>
+            </footer>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <% if (locals.content) { %>
+                <div class="blog-container">
+                    <h1><%= content.title %></h1>
+                    <h2><%= content.author %></h2>
+                    <p><%= content.blog %></p>   
+                </div>
+                
+            <% } else { %>
+                <h1>Happy Blogging! Write your thoughts away ✍️</h1>
+                <form class="form-container" action="/submit" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title:</label><br>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group blog-group">
+                        <label for="blog">Blog Content:</label><br>
+                        <textarea id="blog" name="blog" rows="10" cols="50" required></textarea>
+                    </div>
+                    <div class="form-group submit-group">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            <% } %>
+        </main>
+    </div>
+
+    <!-- Script to set the current year -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
